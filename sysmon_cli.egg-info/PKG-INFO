@@ -1,0 +1,7 @@
+Metadata-Version: 2.4
+Name: sysmon-cli
+Version: 1.0.0
+Summary: A command-line system monitor utility
+Author-email: Ridho Rezky Anwar <ridhorezky.dev@gmail.com>
+Requires-Dist: psutil
+Requires-Dist: rich

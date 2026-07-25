@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "sysmon-cli"
+version = "1.0.0"
+description = "A command-line system monitor utility"
+authors = [
+    { name="Ridho Rezky Anwar", email="ridhorezky.dev@gmail.com" },
+]
+dependencies = [
+    "psutil",
+    "rich"
+]
+
+[project.scripts]
+sysmon = "sysmon.main:main"

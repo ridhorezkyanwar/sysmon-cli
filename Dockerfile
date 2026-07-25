@@ -8,8 +8,9 @@ WORKDIR /app
 COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
-# 4. Salin seluruh kode proyek ke dalam kontainer
+# 4. Salin seluruh kode proyek ke dalam kontainer dan install paket
 COPY . .
+RUN pip install --no-cache-dir .
 
 # 5. Perintah utama untuk menjalankan aplikasi
-ENTRYPOINT ["python", "-m", "sysmon_cli"]
+ENTRYPOINT ["sysmon"]

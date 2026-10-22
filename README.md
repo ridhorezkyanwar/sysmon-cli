@@ -1,63 +1,77 @@
-# 💻 SysMon-CLI
+# SysMon-CLI
 
-![Python Version](https://img.shields.io/badge/python-3.8%2B-blue.svg)
-![Tests](https://img.shields.io/badge/tests-passing-brightgreen.svg)
-![Status](https://img.shields.io/badge/status-active-success.svg)
+A Python command-line utility that displays a snapshot of CPU usage, memory utilization, and root-disk usage in a readable terminal table.
 
-A lightweight, elegant command-line interface (CLI) tool to monitor system resources. Built entirely with Python, it extracts real-time CPU, Memory, and Disk metrics and presents them in a clean, human-readable terminal UI.
+## Features
 
-Designed with a focus on clean code, modularity, and testability, serving as a showcase for Python systems engineering and CLI packaging.
+- Reports CPU utilization.
+- Displays used and total memory, plus utilization percentage.
+- Displays free and total space for the root disk.
+- Uses `psutil` to collect system metrics and `rich` to format terminal output.
+- Includes tests for the system-metric helper functions.
 
-## ✨ Features
+## Requirements
 
-* **Core System Metrics:** Real-time tracking of CPU percentage, RAM allocation, and Root Disk usage using `psutil`.
-* **Beautiful Terminal UI:** Styled and structured output using the `rich` library for maximum readability in the console.
-* **Robust & Tested:** Covered by automated unit tests using `pytest` to ensure data accuracy and reliability.
-* **Easily Packaged:** Configured with `pyproject.toml` for standard, seamless `pip` installation.
+- Python
+- `pip`
 
-## 🚀 Installation
-
-It is highly recommended to install this tool within a Python Virtual Environment (`venv`) to prevent dependency conflicts with your system packages.
+## Install from source
 
 ```bash
-# 1. Clone the repository
-git clone [https://github.com/ridhorezkyanwar/sysmon-cli.git](https://github.com/ridhorezkyanwar/sysmon-cli.git)
+git clone https://github.com/ridhorezkyanwar/sysmon-cli.git
 cd sysmon-cli
+python -m venv .venv
+```
 
-# 2. Create and activate a virtual environment
-python -m venv venv
+Activate the virtual environment:
 
-# On Windows (PowerShell):
-.\venv\Scripts\Activate.ps1
-# On Linux/macOS:
-source venv/bin/activate
+**Windows PowerShell**
+```powershell
+.venv\Scripts\Activate.ps1
+```
 
-# 3. Install the package and dependencies
-pip install -e .
+**Linux / macOS**
+```bash
+source .venv/bin/activate
+```
 
-🛠️ Usage
-Once installed, the CLI tool is registered to your path. You can run it directly from your terminal:
+Install the project and its runtime dependencies:
 
-Bash
+```bash
+python -m pip install --upgrade pip
+python -m pip install -e .
+```
+
+## Usage
+
+Display the current metrics:
+
+```bash
 sysmon --monitor
-Example Output:
+```
 
-Plaintext
-                 System Resource Monitor                
-┏━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
-┃ Resource    ┃ Usage / Value                       ┃
-┡━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
-│ CPU Usage   │ 15.1%                               │
-│ Memory      │ 10.66GB / 15.68GB (68.0%)           │
-│ Disk (Root) │ Free: 46.5GB / 72.46GB (35.8% Used) │
-└─────────────┴─────────────────────────────────────┘
-🧪 Running Tests
-To verify that the core logic and metric calculations are functioning correctly, run the included test suite:
+The command displays a single snapshot each time it runs; it is not a continuous polling monitor.
 
-Bash
-pytest tests/
+## Run tests
 
+Install pytest in the active environment if it is not already available, then run:
 
-👨‍💻 Author
+```bash
+python -m pip install pytest
+python -m pytest tests/
+```
+
+## Project layout
+
+```text
+sysmon/
+  main.py       # CLI arguments and terminal output
+  monitor.py    # CPU, memory, and disk metric helpers
+tests/
+  test_monitor.py
+pyproject.toml  # Package metadata and sysmon entry point
+```
+
+## Author
+
 Ridho Rezky Anwar
-Self-taught Python & Systems Developer

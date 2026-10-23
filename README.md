@@ -1,5 +1,15 @@
 # SysMon-CLI
 
+<p align="center">
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=500&size=18&duration=2600&pause=850&color=58A6FF&center=true&vCenter=true&width=520&lines=Build+%E2%80%A2+Test+%E2%80%A2+Improve" alt="Animated banner: Build, Test, Improve" />
+</p>
+<p align="center">
+  <img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white" alt="Python badge" />
+  <img src="https://img.shields.io/badge/CLI-555555?style=flat-square&logo=gnubash&logoColor=white" alt="CLI badge" />
+  <img src="https://img.shields.io/badge/psutil-3572A5?style=flat-square" alt="psutil badge" />
+</p>
+
+
 A Python command-line utility that displays a snapshot of CPU usage, memory utilization, and root-disk usage in a readable terminal table.
 
 ## Features

@@ -17,8 +17,8 @@ def display_metrics():
 
     # Masukkan ke tabel
     table.add_row("CPU Usage", f"{cpu}%")
-    table.add_row("Memory", f"{mem['used']}GB / {mem['total']}GB ({mem['percent']}%)")
-    table.add_row("Disk (Root)", f"Free: {disk['free']}GB / {disk['total']}GB ({disk['percent']}% Used)")
+    table.add_row("Memory", f"{mem['used']}GiB / {mem['total']}GB ({mem['percent']}%)")
+    table.add_row("Disk (Root)", f"Free: {disk['free']}GiB / {disk['total']}GB ({disk['percent']}% Used)")
 
     console.print(table)
 

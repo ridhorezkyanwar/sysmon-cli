@@ -6,6 +6,7 @@ build-backend = "setuptools.build_meta"
 name = "sysmon-cli"
 version = "1.0.0"
 description = "A command-line system monitor utility"
+requires-python = ">=3.9"
 authors = [
     { name="Ridho Rezky Anwar", email="ridhorezky.dev@gmail.com" },
 ]

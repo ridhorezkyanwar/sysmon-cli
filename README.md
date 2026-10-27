@@ -6,19 +6,19 @@
   <img src="https://img.shields.io/badge/psutil-3572A5?style=flat-square" alt="psutil badge" />
 </p>
 
-A Python command-line utility that displays a snapshot of CPU usage, memory utilization, and root-disk usage in a readable terminal table.
+A Python 3.9+ command-line utility that displays a snapshot of CPU usage, memory utilization, and root-disk usage in a readable terminal table. Memory and disk capacity are reported in GiB; CPU and memory/disk utilization are percentages.
 
 ## Features
 
 - Reports CPU utilization.
-- Displays used and total memory, plus utilization percentage.
-- Displays free and total space for the root disk.
+- Displays used and total memory in GiB, plus utilization percentage.
+- Displays free and total root-disk capacity in GiB, plus utilization percentage.
 - Uses `psutil` to collect system metrics and `rich` to format terminal output.
 - Includes tests for the system-metric helper functions.
 
 ## Requirements
 
-- Python
+- Python 3.9 or newer
 - `pip`
 
 ## Install from source
